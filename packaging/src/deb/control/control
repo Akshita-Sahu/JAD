@@ -1,0 +1,10 @@
+Package: jad
+Version: [[version]]
+Section: misc
+Priority: optional
+Architecture: all
+Depends: jdk (>= 1.6)
+Maintainer: jad <https://github.com/akshita-sahu/jad>
+Description: JAD is a Java Diagnostic tool open sourced by Akshita Sahu.
+Distribution: development
+Depends: telnet, curl, unzip

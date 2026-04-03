@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package jad.grpc.unittest;
+
+service JADUnittestService {
+  rpc unary(JADUnittestRequest) returns (JADUnittestResponse);
+  rpc unaryAddSum(JADUnittestRequest) returns (JADUnittestResponse);
+  rpc unaryGetSum(JADUnittestRequest) returns (JADUnittestResponse);
+  rpc clientStreamSum(stream JADUnittestRequest) returns (JADUnittestResponse);
+  rpc serverStream(JADUnittestRequest) returns (stream JADUnittestResponse);
+  rpc biStream(stream JADUnittestRequest) returns (stream JADUnittestResponse);
+}
+
+message JADUnittestRequest {
+  int32 id = 1;
+  string message = 2;
+  int32 num = 3;
+}
+
+message JADUnittestResponse{
+  int32 id = 1;
+  string message = 2;
+  int32 num = 3;
+}

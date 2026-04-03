@@ -1,0 +1,7 @@
+{
+  "location": "Whole project C:\\Users\\AKSHITA\\Desktop\\JAD",
+  "current_state": "The project is Alibaba Arthas. We need to complete rebranding to JAD.",
+  "tech_stack": "Java, Maven, Shell, Python",
+  "tests": "Existing Arthas tests with possible Chinese chars",
+  "observations": "There are existing python scripts (rebrand.py) that might have been used for partial work. Need to delete arthas-spring-boot-starter, replace text patterns, change pom.xml, remove Chinese chars, and commit."
+}

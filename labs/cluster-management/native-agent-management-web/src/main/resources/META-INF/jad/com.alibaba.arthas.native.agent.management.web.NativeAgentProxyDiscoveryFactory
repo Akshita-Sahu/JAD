@@ -1,0 +1,2 @@
+zookeeper=com.akshita.jad.nat.agent.management.web.discovery.impl.ZookeeperNativeAgentProxyDiscovery
+etcd=com.akshita.jad.nat.agent.management.web.discovery.impl.EtcdNativeAgentProxyDiscovery

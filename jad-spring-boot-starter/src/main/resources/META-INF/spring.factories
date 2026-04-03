@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.akshita.jad.spring.JADConfiguration,\
+  com.akshita.jad.spring.endpoints.JADEndPointAutoConfiguration

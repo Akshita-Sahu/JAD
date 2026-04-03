@@ -1,0 +1,2 @@
+zookeeper=com.akshita.jad.nat.agent.registry.impl.ZookeeperNativeAgentRegistry
+etcd=com.akshita.jad.nat.agent.registry.impl.EtcdNativeAgentRegistry

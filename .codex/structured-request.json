@@ -1,0 +1,14 @@
+{
+  "goal": "Rebrand Akshita Sahu JAD to JAD (Java Diagnostic Tool) and add advanced features.",
+  "tasks": [
+    "Rebrand text, packages, folder names, and URLs",
+    "Update copyright headers, LICENSE, and documentation",
+    "Clean up Akshita Sahu-specific files and CI references",
+    "Add new features: AI anomaly detection, Smart suggestions, Enhanced Web Console, Session history, Slack/webhook alerts, jad report, Improved profiler, REST API mode"
+  ],
+  "constraints": [
+    "Follow AGENTS.md rules",
+    "Do not break existing functionality",
+    "Confirm after major steps"
+  ]
+}

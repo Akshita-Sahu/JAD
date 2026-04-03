@@ -1,0 +1,36 @@
+package com.akshita.jad.agent;
+
+import java.net.URL;
+import java.net.URLClassLoader;
+
+/**
+ * @author beiwei30 on 09/12/2016.
+ */
+public class JADClassloader extends URLClassLoader {
+    public JADClassloader(URL[] urls) {
+        super(urls, ClassLoader.getSystemClassLoader().getParent());
+    }
+
+    @Override
+    protected synchronized Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
+        final Class<?> loadedClass = findLoadedClass(name);
+        if (loadedClass != null) {
+            return loadedClass;
+        }
+
+        // parent（SystemClassLoader），ClassNotFoundException
+        if (name != null && (name.startsWith("sun.") || name.startsWith("java."))) {
+            return super.loadClass(name, resolve);
+        }
+        try {
+            Class<?> aClass = findClass(name);
+            if (resolve) {
+                resolveClass(aClass);
+            }
+            return aClass;
+        } catch (Exception e) {
+            // ignore
+        }
+        return super.loadClass(name, resolve);
+    }
+}

@@ -1,0 +1,20 @@
+# Stage 1: Build
+FROM eclipse-temurin:8-jdk-alpine AS builder
+
+ARG JAD_VERSION="4.1.8"
+ARG MIRROR=false
+ENV MAVEN_HOST=https://repo1.maven.org/maven2 \
+  MIRROR_MAVEN_HOST=https://maven.akshita-sahu.com/repository/public
+
+# if use mirror change to akshita-sahu mirror site
+RUN if [ "$MIRROR" = "true" ]; then MAVEN_HOST=${MIRROR_MAVEN_HOST} ; fi && \
+  # download & install jad
+  wget -qO /tmp/jad.zip "${MAVEN_HOST}/com/akshita-sahu/jad/jad-packaging/${JAD_VERSION}/jad-packaging-${JAD_VERSION}-bin.zip" && \
+  mkdir -p /opt/jad && \
+  unzip /tmp/jad.zip -d /opt/jad && \
+  rm /tmp/jad.zip
+
+# Stage 2: Final
+FROM alpine
+
+COPY --from=builder /opt/jad /opt/jad

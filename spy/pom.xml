@@ -1,0 +1,29 @@
+﻿<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.akshita-sahu</groupId>
+        <artifactId>jad-all</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <artifactId>jad-spy</artifactId>
+    <name>jad-spy</name>
+    <url>https://github.com/akshita-sahu/jad</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.akshita-sahu</groupId>
+            <artifactId>jad-common</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>jad-spy</finalName>
+    </build>
+
+</project>
+
